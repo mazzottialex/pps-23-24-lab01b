@@ -16,16 +16,21 @@ public class LogicTest {
   }
 
   @Test 
-  void checkGenerateKnight(){
+  void checkGenerateKnightPawn(){
     Boolean checkKnight = false;
+    Boolean checkPawn = false;
     for(int i = 0; i<size; i++){
       for(int j = 0;j<size; j++ ){
         if(log.hasKnight(i, j)){
           checkKnight = true;
         }
+        if(log.hasPawn(i, j)){
+          checkPawn = true;
+        }
       }
     }
     assertTrue(checkKnight);
+    assertTrue(checkPawn);
   }
 
   @Test
