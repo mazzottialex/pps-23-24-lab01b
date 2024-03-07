@@ -46,13 +46,9 @@ public class LogicTest {
   }
 
   @Test
-  public void test() {
-    
-    assertTrue(true);
-    // TODO: Add your test logic here
-    // You can generate random inputs and assert the expected output
-    // For example:
-    // int result = Logic.someMethod(5, 10);
-    // assertEquals(expectedResult, result);
+  void exceptionWrongParametersHit(){
+    log = new LogicsImpl(SIZE, knight, pawn);
+    assertThrows( IllegalStateException.class, () -> log.hit(1,1));
   }
+
 }

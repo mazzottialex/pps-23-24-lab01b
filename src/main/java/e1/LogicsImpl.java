@@ -39,7 +39,7 @@ public class LogicsImpl implements Logics {
 			this.knight = new Pair<>(row,col);
 			return this.pawn.equals(this.knight);
 		}
-		return false;
+			throw new IllegalStateException();
 	}
 
 	@Override
