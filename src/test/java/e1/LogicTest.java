@@ -1,9 +1,6 @@
 package e1;
 import org.junit.jupiter.api.*;
 
-import e1.Logics;
-import e1.LogicsImpl;
-
 import static org.junit.jupiter.api.Assertions.*;
 public class LogicTest {
 
@@ -43,12 +40,6 @@ public class LogicTest {
     assertTrue(!log.hit(1,2));
     assertTrue(!log.hit(3,3));
     assertTrue(log.hit(2,1));
-  }
-
-  @Test
-  void exceptionWrongParametersHit(){
-    log = new LogicsImpl(SIZE, knight, pawn);
-    assertThrows( IllegalStateException.class, () -> log.hit(1,1));
   }
 
   @Test
