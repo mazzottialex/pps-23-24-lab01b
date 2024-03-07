@@ -51,4 +51,9 @@ public class LogicTest {
     assertThrows( IllegalStateException.class, () -> log.hit(1,1));
   }
 
+  @Test
+  void exceptionParametersOutOfBoundHit(){
+    log = new LogicsImpl(SIZE, knight, pawn);
+    assertThrows( IndexOutOfBoundsException.class, () -> log.hit(6,4));
+  }
 }
