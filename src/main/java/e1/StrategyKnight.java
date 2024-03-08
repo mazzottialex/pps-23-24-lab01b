@@ -1,6 +1,6 @@
 package e1;
 
-public class StrategyKnight {
+public class StrategyKnight implements Strategy {
 
     private boolean canMove = false;
     private Pair<Integer, Integer> position;
